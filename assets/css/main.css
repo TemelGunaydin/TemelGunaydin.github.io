@@ -1706,7 +1706,7 @@ button,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-  background-color: rgb(34, 2, 2);
+  background-color: #17D7A0;
 }
 
 @media screen and (max-width: 480px) {
