@@ -4,18 +4,22 @@ body {
   background-color: #161923;
   background-size: cover;
   background-position: top center;
+    margin: 0; /* Ensure there is no margin around the body */
+    padding: 0; /* Ensure there is no padding around the body */
 }
+
+/* #apps {
+  margin-top: 100px;
+} */
 
 
 #appTitle {
   margin-top: 80px;
-  font-family: 'Alegreya';
-
 }
 
 #coursesTitle {
   margin-top: 80px;
-  font-family: 'Alegreya';
+  
 }
 
 .rectangle-view {
@@ -78,9 +82,8 @@ h6 {
 
 .icon {
   margin-top: 0;
-
+ 
 }
-
 .icon-nav {
   display: flex;
   justify-content: center;
@@ -89,47 +92,37 @@ h6 {
   padding: 20px;
   margin-top: 20px;
 }
-
 .icon-row {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
-  justify-content: center;
-  /* Center the icons horizontally */
-  align-items: center;
-  /* Center the icons vertically */
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center; /* Center the icons vertically */
 }
-
 .icon-link {
-  background-color: #74cbc1;
-  border-radius: 20px;
+  background-color: #d3d3d3; /* Gray circle */
+  border-radius: 50%;
   padding: 15px;
   text-decoration: none;
   color: #1a1919;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .icon-link:hover {
-  background-color: #18aa13;
+  background-color: #18aa13; /* Darker gray on hover */
   color: #fff;
 }
-
 .label {
-  display: none;
-  /* Hide labels (optional) */
+  display: none; /* Hide labels (optional) */
 }
-
 .icon-link i {
   font-size: 1.5em;
   color: inherit;
 }
 
 .icon-row li {
-  margin: 0 10px;
-  /* Adjust spacing between icons */
+  margin: 0 10px; /* Adjust spacing between icons */
 }
-
 .icon:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -138,7 +131,6 @@ h6 {
   font-weight: normal;
   text-transform: none !important;
 }
-
 .icon>.label {
   display: none;
 }
@@ -149,17 +141,13 @@ h6 {
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 100%;
-  display: flex;
-  /* Use flexbox to center the content */
-  justify-content: center;
-  /* Center horizontally */
-  align-items: center;
-  /* Center vertically */
+  display: flex; /* Use flexbox to center the content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   padding: 1em;
   color: white;
   background-color: #485158;
 }
-
 .icon.style2:before {
   display: block;
   width: 1.25em;
@@ -191,6 +179,69 @@ ul.icons li:last-child {
   padding-right: 0;
 }
 
+/* thumbnails */
+
+.thumbnails {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  margin: 0 0 4em -2em;
+}
+
+.thumbnails a {
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-bottom: none;
+  display: block;
+  width: 100%;
+  margin: 0 0 3.5em 0;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgba(78, 75, 75, 0.144);
+  background-color: rgba(49, 49, 54, 0.671);
+  cursor: pointer;
+  outline: 0;
+  overflow: hidden;
+}
+
+.thumbnails a img {
+  display: block;
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+
+
+.thumbnails a:hover {
+  background-color: #c70909b0;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #ffffff;
+}
+
+.thumbnails>div {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: calc(100% / 3);
+  padding-left: 2em;
+}
+
+.thumbnails>div> :last-child {
+  margin-bottom: 0;
+}
 
 #wrapper {
   max-width: 68em;
@@ -210,24 +261,22 @@ ul.icons li:last-child {
 
 header {
   display: flex;
-  justify-content: center;
-  /* Center the icons horizontally */
-  align-items: center;
-  /* Center the icons vertically */
-  padding-top: 10px;
-  /* Adjust the padding as needed */
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center; /* Center the icons vertically */
+  padding-top: 10px; /* Adjust the padding as needed */
 }
 
+
+/* New styles for aligning the image to the left under the Apps heading */
 
 .rectangle-view {
   display: inline-flex;
-  background-color: #ffffff00;
-  border-radius: 10px;
-
+  justify-content: flex-center;
 }
 
 .app-image {
-  margin: 20px;
+  display: block;
+  margin: 0;
   height: 400px;
   /* Adjust the height as needed */
   width: 200px;
@@ -235,36 +284,36 @@ header {
   border-radius: 15px;
   transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
   border: none;
+  box-shadow: none;
 }
 
 .app-image:hover {
-  opacity: 1;
+  opacity: 0.8;
   transform: scale(1.05);
 }
 
 /* Make the Apps and Contents titles white */
 #apps h1,
 #main h1 {
-  color: #ffffff
+  color: rgb(224, 217, 217);
 }
-
 
 /* Ensure the font color remains white for all text in the main section */
 #main,
-#apps {
-  color: rgb(97, 167, 32);
+#apps{
+  color: rgb(224, 217, 217);
   text-align: center;
 }
 
 /* Apply the same hover effect for all thumbnails */
-#main img {
+#main .thumbnails img {
   transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
   border-radius: 15px;
   border: none;
   box-shadow: none;
 }
 
-#main img:hover {
+#main .thumbnails img:hover {
   opacity: 0.8;
   transform: scale(1.05);
   color: inherit;
@@ -272,7 +321,7 @@ header {
 }
 
 /* Ensure the background color remains unchanged for specific elements */
-#main a {
+#main .thumbnails a {
   background-color: transparent;
   /* Ensure background color does not change */
   box-shadow: none;
@@ -280,14 +329,25 @@ header {
   border: none;
 }
 
-#main a:hover {
+#main .thumbnails a:hover {
   background-color: transparent;
   /* Ensure background color does not change */
   box-shadow: none;
   /* Remove any shadow effect */
 }
 
+/* Specific background color for Linux Education Program */
+.thumbnail-item {
+  padding: 10px;
+  /* Add some padding for better appearance */
+  border-radius: 15px;
+  /* Ensure rounded corners */
+}
 
+.thumbnail-item:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Slightly darker on hover */
+}
 
 a img {
   border-bottom: none;
@@ -301,12 +361,10 @@ a img {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* 3 columns */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 50px;
   width: 100%;
-  max-width: 1200px;
-  /* Make it responsive */
+  max-width: 1200px; /* Make it responsive */
 }
 
 .card {
@@ -334,15 +392,13 @@ a img {
   padding: 10px;
   background-color: #181b24;
 
-
+  
 }
 
 .card h3 {
   font-size: 1em;
   margin-top: 2px;
-  color: #ffffff
-
-
+  color: rgb(224, 217, 217);
 }
 
 .card p {
